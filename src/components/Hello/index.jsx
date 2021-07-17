@@ -1,10 +1,10 @@
 import React,{Component} from 'react';
-import './index.css'
+import hello from './index.module.css'
 
 export default class Hello extends Component{
     render(){
         return(
-            <div className='title'>你好啊</div>
+            <div className={hello.title}>你好啊</div>
         )
     }
 }
