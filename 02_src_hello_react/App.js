@@ -6,7 +6,7 @@ import React,{Component} from 'react';
 import Hello from './components/Hello';
 import Welcome from './components/Welcome'
 
-//创建并暴露App组价
+//创建并暴露App组件
 export default class App extends Component{
   render(){
     return(
