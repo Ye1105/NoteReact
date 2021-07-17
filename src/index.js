@@ -1,3 +1,4 @@
+//引入react核心库
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
