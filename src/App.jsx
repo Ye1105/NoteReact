@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 export default class App extends Component {
-
+	//yarn add axios
 	getStudentData=() => {
-		axios.get('')
+		axios.get('http://localhost:3000/posts')
 		.then(
 			response => {
 				console.log('成功了',response.data)
