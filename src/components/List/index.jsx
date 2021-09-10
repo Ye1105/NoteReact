@@ -9,6 +9,7 @@ export default class index extends Component {
             super(props);
         }
     */
+    //npm install pubsub-js
     componentDidMount(){
         //声明
         var My_TOPIC='test';
