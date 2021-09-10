@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import axios from 'axios'
-import PubSub from 'pubsub-js'
 
 export default class Search extends Component {
 
@@ -17,27 +16,20 @@ export default class Search extends Component {
         //const {keyWordElement:{value}}=this;
         //获取用户的输入(连续解构赋值+重命名)
         const {keyWordElement:{value:keyWord}}=this;  //连续结构赋值，获取到value,并重命名为keyWord
-        //console.log(this.keyWordElement.value);
-        console.log("keyWord的值：",keyWord);
+        console.log(this.keyWordElement.value);
+        console.log(keyWord);
         //发送请求前通知App更新状态
-        // 多行注释  alt+shift+A
-        /* this.props.updateAppState({isFirst:false,isLoading:true}); */
-        var My_TOPIC='test';
-        console.log("Search组件：发布【My_TOPIC】的消息");
-        PubSub.publish(My_TOPIC,{isFirst:false,isLoading:true});
-        
+        this.props.updateAppState({isFirst:false,isLoading:true});
         //发送网络请求
         axios.get(`/api1/search/users?q=${keyWord}`).then(
             response=>{
                 //请求成功后通知App更新状态
                 console.log(response.data);
-                /* this.props.updateAppState({isLoading:false,users:response.data.items}); */
-                PubSub.publish(My_TOPIC,{isLoading:false,users:response.data.items});
+                this.props.updateAppState({isLoading:false,users:response.data.items});
             },
             error=> {
                 //请求失败后通知App更新状态
-                /* this.props.updateAppState({isLoading:false,err:error.message}); */
-                PubSub.publish(My_TOPIC,{isLoading:false,err:error.message});
+                this.props.updateAppState({isLoading:false,err:error.message});
             }
         )
     }

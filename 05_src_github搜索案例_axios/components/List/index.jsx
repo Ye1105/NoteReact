@@ -1,42 +1,16 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import './index.css'
-import PubSub from 'pubsub-js'
 
 export default class index extends Component {
-
-    /*     constructor(props){
-            console.log('constructor');
-            super(props);
-        }
-    */
-    componentDidMount(){
-        //声明
-        var My_TOPIC='test';
-        this.token=PubSub.subscribe(My_TOPIC,(msg,data)=>{   
-            //不想接收msg时，也可以用占位符 (_,data){}
-            console.log("List组件:成功订阅到【My_TOPIC】的消息",data);
-            this.setState(data);
-        })
+    constructor(props){
+        super(props);
+        console.log(this.props);
     }
-
-    componentWillUnmount(){
-        //卸载组件是，取消订阅
-        PubSub.unsubscribe(this.token);
-    }
-
-
-    state={
-        //初始化状态
-        users:[], //Users初始值为数组
-        isFirst:true, //是否为第一次打开界面
-        isLoading:false, //标识是否处于加载中
-        err:'', //存储请求相关的错误信息
-    }
-
 
     render() {
 
-        const{users,isFirst,isLoading,err}=this.state;
+        const{users,isFirst,isLoading,err}=this.props;
 
         return (        
             <div className="row">
