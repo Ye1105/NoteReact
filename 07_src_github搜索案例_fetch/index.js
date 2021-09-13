@@ -1,12 +1,11 @@
 /*
  * @Author: your name
  * @Date: 2021-09-09 11:16:33
- * @LastEditTime: 2021-09-13 09:36:59
+ * @LastEditTime: 2021-09-13 09:35:23
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \Web.Project.React\src\index.js
  */
-
 //引入react核心库
 import React from 'react';
 //引入ReactDOM
