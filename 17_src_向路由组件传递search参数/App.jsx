@@ -24,7 +24,7 @@ export default class App extends Component {
 
 							{/* 在React中靠路由链接实现切换组件--编写路由链接 */}
 							<MyNavLink to="/about">About</MyNavLink>
-							<MyNavLink to="/home">Home</MyNavLink>
+							<MyNavLink to="/home">Home</MyNavLink>					
 						</div>
 					</div>
 					<div className="col-xs-6">
@@ -35,7 +35,7 @@ export default class App extends Component {
 									<Route path="/about" component={About}/>
 									<Route path="/home" component={Home}/>
 									<Redirect to="/about"/>
-								</Switch>
+								</Switch>			
 							</div>
 						</div>
 					</div>
