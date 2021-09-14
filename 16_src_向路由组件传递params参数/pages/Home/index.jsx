@@ -1,0 +1,31 @@
+import React, { Component } from 'react'
+
+import {Switch,Route,Redirect} from 'react-router-dom'
+
+import MyNavLink from '../../components/MyNavLink'
+import News from './News'     
+import Message from './Message'
+
+export default class Home extends Component {
+    render() {
+        return (
+            <div>
+               <h3>Home Content</h3>
+               <ul className="nav nav-tabs">
+					<li>
+                     <MyNavLink to='/home/message'>Message</MyNavLink>
+                    </li>
+                    <li>
+                     <MyNavLink to='/home/news'>News</MyNavLink>
+                    </li>
+				</ul>
+                <Switch>
+                    {/* 注册路由 */}
+                    <Route  path='/home/message' component={Message}/>
+                    <Route  path='/home/news' component={News}/>
+                    <Redirect  to='/home/news'/>
+                </Switch>
+            </div>
+        )
+    }
+}
