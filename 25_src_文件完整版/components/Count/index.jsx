@@ -4,7 +4,7 @@ import {Button,Space} from 'antd'
 //引入store,获取状态
 import store from '../../redux/store'
 //引入actionCreator 专门用于创建action对象
-import {createIncrementAction,createDecrementAction,createIncrementAsyncAction} from '../../redux/count_action'
+import {createIncrementAction,createDecrementAction} from '../../redux/count_action'
 
 export default class Count extends Component {
 
@@ -30,7 +30,7 @@ export default class Count extends Component {
         console.log("执行加法")
         //通知redux加value
         const{value}=this.selectNumber
-        store.dispatch(createDecrementAction(value*1))
+          store.dispatch(createDecrementAction(value*1))
     }
     
     //奇数再加
@@ -47,9 +47,10 @@ export default class Count extends Component {
     incrementAsync=(params) => {
         console.log("执行异步")
         const{value}=this.selectNumber
-        //store.dispatch(createIncrementAsyncAction(value*1,500))
-
-        store.dispatch(createIncrementAsyncAction(value*1,500))
+        const timeOut= setTimeout(() => {
+            store.dispatch(createIncrementAction(value*1))
+            clearTimeout(timeOut)
+        }, 500);    
     }
 
 
