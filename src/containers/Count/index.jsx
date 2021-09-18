@@ -8,7 +8,7 @@ import {Button,Space} from 'antd'
 import{connect} from 'react-redux'
 
 //引入action
-import {createIncrementAction,createDecrementAction,createIncrementAsyncAction} from '../../redux/count_action'
+import {createIncrementAction,createDecrementAction,createIncrementAsyncAction} from '../../redux/actions/count'
 
 //使用connet()() 创建并暴露一个Count的容器组件
 
@@ -90,7 +90,7 @@ class Count extends Component {
 }
 
 export default connect(
-  state => ({name:state}),
+  state => ({name:state.he}),
 
   //mapDispatchToProps 的一般写法
   /*  dispatch =>
