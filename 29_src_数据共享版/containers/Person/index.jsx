@@ -14,7 +14,7 @@ class Person extends Component {
     addPerson=() => {
         const{nameNode,ageNode}=this
         const name=nameNode.input.value
-        const age=ageNode.input.value*1
+        const age=ageNode.input.value
         const personObj={id:nanoid(),name,age}
         console.log(personObj)
         this.nameNode.input.value=''
@@ -24,10 +24,10 @@ class Person extends Component {
 
     render() {
         console.log("personUI组件接收到的参数：",this.props)
-        const{persons}=this.props
+        const{renshu}=this.props
         return (
             <div>
-                 <h1>当前Count值：{this.props.count}</h1>
+                 <h1>当前Count值：{this.props.name}</h1>
               <br />
                  <Space size='small'>
                     <Input  ref={c=>this.nameNode=c} size="default size" style={{width:'200px'}} placeholder="输入名称"/>
@@ -37,7 +37,7 @@ class Person extends Component {
                 </Space>
                 <ul>
                     {
-                        persons.map((params) => {
+                        renshu.map((params) => {
                            return <li key={params.id}>{params.name}----{params.age}</li>
                         })
                     }
@@ -50,8 +50,8 @@ class Person extends Component {
 export default connect(
     //mapStatetoProps
     state => ({
-        count:state.count,
-        persons:state.persons
+        name:state.he,
+        renshu:state.rens
     }), 
      //mapDispatchtoProps
     {

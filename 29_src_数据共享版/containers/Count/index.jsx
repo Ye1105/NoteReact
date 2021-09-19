@@ -66,11 +66,11 @@ class Count extends Component {
 
 
   render() {
-      console.log("countUI组件接收到的name参数：",this.props.count)
-      console.log("countUI组件接收到的renshu参数：",this.props.persons)
+      console.log("countUI组件接收到的name参数：",this.props.name)
+      console.log("countUI组件接收到的renshu参数：",this.props.renshu)
       return (
           <div>
-              <h1>当前求和为:{this.props.count},当前人数总数:{this.props.persons.length}</h1>
+              <h1>当前求和为:{this.props.name},当前人数总数:{this.props.renshu.length}</h1>
               <Space size='small'>
                   <select ref={c=>{this.selectNumber=c} }>
                       <option value="1">1</option>
@@ -93,8 +93,8 @@ class Count extends Component {
 export default connect(
   //mapStateToProps
   state => ({
-    count:state.count,
-    persons:state.persons
+    name:state.he,
+    renshu:state.rens
   }),
   //mapDispatchProps 的简写
   {
