@@ -1,0 +1,322 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+body {
+	font-family: 'Microsoft YaHei';
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+* {
+	-ms-word-break: break-all;
+	word-break: break-all;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+img {
+	display: block;
+	line-height: 0;
+	width: 100%;
+}
+
+header.download {
+	height: 1.66666667rem;
+	background: rgba(52, 152, 245, 0.8);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+}
+header.downloadanzhuang {
+	height: 1.66666667rem;
+	background: rgba(52, 152, 245, 0.8);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+}
+
+header.download .con2 {
+	height: 1.36rem;
+	width: 1.36rem;
+	position: absolute;
+	top: 0.42333333rem;
+	left: 0.29333333rem;
+}
+
+header.download .word1 {
+	width: 3.6rem;
+	height: 0.8rem;
+	position: absolute;
+	top: 0.66666667rem;
+	left: 1.84rem;
+}
+
+header.download .dlbtn1 {
+	width: 2.42666667rem;
+	height: 0.90666667rem;
+	position: absolute;
+	top: 0.588333333rem;
+	right: 0.26666667rem;
+}
+
+section {
+	position: relative;
+}
+
+
+section .dlgif {
+	top: 20.5220000rem;
+	left: 1.25566667rem;
+	position: absolute;
+	width: 7.34rem;
+}
+
+	section .dlgifkuang {
+		top: 19.2360000rem;
+		left: 1.02666667rem;
+		position: absolute;
+		width: 7.84rem;
+	}
+
+	section .dlbtn2 {
+		top: 17.790000rem;
+		left: 3.06666667rem;
+		position: absolute;
+		width: 3.84rem;
+	}
+
+	section .dlgif2 {
+		top: 13.189rem;
+		left: 1.25566667rem;
+		position: absolute;
+		width: 7.34rem;
+	}
+
+	section .dlgifkuang2 {
+		top: 12.366rem;
+		left: 1.02666667rem;
+		position: absolute;
+		width: 7.84rem;
+	}
+
+section .dlbtn3 {
+	top: 25.1437333rem;
+	left: 3.06666667rem;
+	position: absolute;
+	width: 3.84rem;
+}
+
+section .notice {
+	padding-top: 9.17333333rem;
+	width: 9.2rem;
+	margin: 0 auto;
+	position: relative;
+	z-index: 2;
+}
+
+section .notice span {
+	width: 100%;
+	border: 1px solid #43feff;
+	height: 0.58666667rem;
+	background: #0455c3;
+	border-radius: 10px;
+	display: block;
+	position: relative;
+	overflow: hidden;
+	padding-left: 0.85333333rem;
+	font-size: 0.32rem;
+	color: #fff;
+	line-height: 0.58666667rem;
+}
+
+section .notice span img {
+	width: 0.45333333rem;
+	position: absolute;
+	transform: translateY(-50%);
+	left: 0.2rem;
+	top: 50%;
+}
+
+section .tuiguang {
+	width: 9.65333333rem;
+	margin: 0 auto;
+	margin-top: 0.28rem;
+}
+
+section .gongxi {
+	width: 9.58666667rem;
+	height: 4.86666667rem;
+	margin: 0 auto;
+	margin-top: 0.50666667rem;
+	padding: 1.36rem 0.26666667rem 20px;
+	position: relative;
+	background: url('/images/gongxibg.png') no-repeat;
+	background-size: contain;
+}
+
+section .gongxi li {
+	float: left;
+	position: relative;
+	padding: 0.13333333rem 0;
+	margin-right: 0.26666667rem;
+	margin-bottom: 0.2rem;
+}
+
+section .gongxi li img {
+	border-radius: 50%;
+	width: 0.84rem;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+}
+
+section .gongxi li span {
+	display: block;
+	background: #164cb2;
+	width: 3.73333333rem;
+	position: relative;
+	height: 0.61333333rem;
+	font-size: 0.28rem;
+	line-height: 0.61333333rem;
+	margin-left: 0.57333333rem;
+	padding-left: 0.48rem;
+	border-top-right-radius: 0.42666667rem;
+	border-bottom-right-radius: 0.42666667rem;
+	color: #fff;
+	font-weight: bold;
+	overflow: hidden;
+}
+
+section .gongxi li span i {
+	font-style: normal;
+	color: #ffef7e;
+}
+
+section .gongxi li:nth-child(2n+2) {
+	margin-right: 0;
+}
+
+section .game {
+	width: 8.8rem;
+	margin: 0 auto;
+	margin-top: 0.81333333rem;
+}
+
+section .packet {
+	font-family: 'Microsoft YaHei';
+	padding-top: 7.38666667rem;
+}
+
+section .packet li {
+	width: 9.13333333rem;
+	height: 1.66666667rem;
+	margin: 0 auto;
+	overflow: hidden;
+	background: url('/~/images/packetbg.png') no-repeat;
+	background-size: contain;
+	position: relative;
+	margin-bottom: 0.16rem;
+}
+
+section .packet li span {
+	display: block;
+	float: left;
+}
+
+section .packet li .price {
+	color: #f74710;
+	position: absolute;
+	top: 45%;
+	right: 7.73333333rem;
+	font-size: 1rem;
+	line-height: 0;
+	transform: translateY(-10%);
+	letter-spacing: -4px;
+}
+
+section .packet li .leftcount {
+	position: absolute;
+	left: 3.49333333rem;
+	top: 1.01333333rem;
+	font-size: .38rem;
+	color: #fff;
+	text-shadow: #ecbf0b 1px 1px 1px;
+}
+
+section .packet li .leftcount i {
+	font-style: normal;
+	color: #f74710;
+}
+
+section .packet li a {
+	width: 1.92rem;
+	height: 0.73333333rem;
+	border-radius: 0.30666667rem;
+	display: block;
+	line-height: 0.73333333rem;
+	color: #fff;
+	text-decoration: none;
+	position: absolute;
+	right: 0.22666667rem;
+	top: 50%;
+	transform: translateY(-40%);
+	background: #a2a2a2;
+	font-size: .36rem;
+	text-align: center;
+}
+
+section .packet li a.current {
+	background: #f74710;
+}
+
+header.pre-download {
+	height: 1.46666667rem;
+	background: rgba(42, 42, 89, 0.9);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+}
+
+header.pre-download .con2 {
+	width: 1.2rem;
+	position: absolute;
+	top: 0.20333333rem;
+	left: 0.2rem;
+}
+
+header.pre-download .word2 {
+	width: 4.32rem;
+	position: absolute;
+	top: 0.33333333rem;
+	left: 1.57333333rem;
+}
+
+header.pre-download .iosbtn {
+	width: 2.04rem;
+	position: absolute;
+	top: 0.45333333rem;
+	right: 1.72rem;
+}
+
+header.pre-download .setup {
+	width: 1.24rem;
+	position: absolute;
+	top: 0.45333333rem;
+	right: 0.25333333rem;
+}

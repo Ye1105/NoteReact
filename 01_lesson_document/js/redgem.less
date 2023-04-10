@@ -1,0 +1,17 @@
+﻿//width 400
+*{box-sizing:border-box;margin:0;padding:0;border:none;font-size:18/@baserem;outline:none;}
+body{font-family:'Microsoft YaHei';background:#fff;}
+ul,ol,li{list-style:none}
+*{-ms-word-break:break-all;word-break:break-all;-ms-word-wrap:break-word;word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+img{display:block; line-height:0;width:100%;}
+@base: 40;
+@baserem:40*1rem;
+.cal(@name, @px){
+    @{name}: @px / @baserem;
+}
+.nav{.cal(height,44);background:#2d6dcc;color:#fff;width:100%; text-align:center; .cal(line-height,44);position:fixed; top:0;left:0;}
+section{margin-top:100px;width:100%;height:auto; overflow:hidden;}
+.rows{ width:100%; padding:20/@baserem;}
+.rows input[type=tel]{ border:none;border-bottom:1px solid #ccc; padding:0 10/@baserem;}
+.rows .btn{ border:1px solid #ccc; padding:5px; display:block; margin:0 auto; text-align:center;}
+.rows .subBtn{ background:#5eb95e;color:#fff;.cal(height,40);.cal(line-height,40); text-align:center; }

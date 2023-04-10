@@ -1,0 +1,66 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-07-14 10:32:40
+ * @LastEditTime: 2021-07-14 11:47:56
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \Web.React\12_组件的生命周期\2_react生命周期(旧).html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2_react生命周期(旧)</title>
+</head>
+<body>
+	<!-- 准备好一个“容器” -->
+	<div id="test"></div>
+	<!-- 引入react核心库 -->
+	<script type="text/javascript" src="../js/react.development.js"></script>
+	<!-- 引入react-dom，用于支持react操作DOM -->
+	<script type="text/javascript" src="../js/react-dom.development.js"></script>
+	<!-- 引入babel，用于将jsx转为js -->
+	<script type="text/javascript" src="../js/babel.min.js"></script>	
+    <script type="text/babel">
+        class Sub extends React.Component{
+            constructor(){
+                super();
+                this.name='yema'
+            }
+            refChangeName(name)
+            {
+                console.log('Sub ---  refChangeName')
+                this.name=name;
+                this.forceUpdate();
+            }
+
+            render(){
+                return(
+                    <div>{this.name}</div>
+                )
+            }
+        }
+
+        class App extends React.Component{
+            
+            handleClick=()=>{
+                console.log('App ---  handleClick')
+                this.subRef.refChangeName("daming")
+            }
+
+            render(){
+                return(
+                    <div>
+                        <Sub ref={(c)=>{this.subRef=c}}/>
+                        <button onClick={this.handleClick}>Click</button>
+                    </div>
+                )
+            }
+        }
+
+
+        //渲染组件
+        ReactDOM.render(<App/>,document.getElementById('test'))
+    </script>
+</body>
+</html>
